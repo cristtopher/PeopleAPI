@@ -4,13 +4,13 @@
     "connector": "memory"
   },
   "mongoDS": {
-    "host": "",
-    "port": 0,
-    "url": "",
+    "host": "axxezodb.documents.azure.com",
+    "port": 10255,
+    "url": "mongodb://axxezodb:vknvCuKJWRfsT4BqZ3PGIxDwIJ50iqAQ6qFbETGdKkvX5uXJ7alqGsCxBjMDNK4J0hS0syDotmEam8geN78qcw==@axxezodb.documents.azure.com:10255/?ssl=true",
     "database": "people",
-    "password": "",
+    "password": "vknvCuKJWRfsT4BqZ3PGIxDwIJ50iqAQ6qFbETGdKkvX5uXJ7alqGsCxBjMDNK4J0hS0syDotmEam8geN78qcw==",
     "name": "mongoDS",
-    "user": "",
+    "user": "axxezodb",
     "connector": "mongodb"
   }
 }
