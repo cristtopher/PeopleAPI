@@ -1,8 +1,5 @@
-# Author: Cristtopher Quintana T. <cquintana@axxezo.com>
-# Date: 3 Aug 2017
-# -----
 FROM node:boron
-
+MAINTAINER Cristtopher Quintana T. "cquintana@axxezo.com"
 # Create app directory
 WORKDIR /usr/src/app
 
