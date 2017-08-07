@@ -9,3 +9,8 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install
           - npm test
+          - docker login -u axxezo -p Gp/THWeHCoql15kUZdig88PFf5oRWM8g
+          - docker build -t axxezo.azurecr.io/papi:v1
+          - docker push axxezo.azurecr.io/papi:v1
+options:
+  docker: true
