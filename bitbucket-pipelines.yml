@@ -11,6 +11,6 @@ pipelines:
           - npm test
           - docker login axxezo.azurecr.io -u axxezo -p Gp/THWeHCoql15kUZdig88PFf5oRWM8g
           - docker build -t axxezo.azurecr.io/papi:v1.1 .
-          - docker push axxezo.azurecr.io/papi:v1
+          - docker push axxezo.azurecr.io/papi:v1.1
 options:
   docker: true
