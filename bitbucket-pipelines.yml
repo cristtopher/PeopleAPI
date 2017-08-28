@@ -10,7 +10,10 @@ pipelines:
           - npm install
           - npm test
           - docker login axxezo.azurecr.io -u axxezo -p Gp/THWeHCoql15kUZdig88PFf5oRWM8g
-          - docker build -t axxezo.azurecr.io/papi:v1.1 .
-          - docker push axxezo.azurecr.io/papi:v1.1
+          - IMAGE=axxezo.azurecr.io/papi
+          - VERSION=v1.1
+          - docker build -t $IMAGE:$VERSION -t $IMAGE:latest .
+          - docker push $IMAGE:$VERSION
+          - docker push $IMAGE:latest
 options:
   docker: true
