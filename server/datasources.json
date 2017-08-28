@@ -6,7 +6,7 @@
   "mongoDS": {
     "host": "axxezodb.documents.azure.com",
     "port": 10255,
-    "url": "mongodb://axxezodb:OHO7eBCZFRx6LJObtemhHQvEn7Xy0WK3xuKrpc19ANZ7O7Z1knSKRXveoQ1mvPvcWa1dPI1FMwpKxBbhQEmU0Q==@axxezodb.documents.azure.com:10255/papi?ssl=true&replicaSet=globaldb?authSource=admin",
+    "url": "mongodb://axxezodb:OHO7eBCZFRx6LJObtemhHQvEn7Xy0WK3xuKrpc19ANZ7O7Z1knSKRXveoQ1mvPvcWa1dPI1FMwpKxBbhQEmU0Q==@axxezodb.documents.azure.com:10255/papi?ssl=true&authSource=admin",
     "database": "papi",
     "password": "OHO7eBCZFRx6LJObtemhHQvEn7Xy0WK3xuKrpc19ANZ7O7Z1knSKRXveoQ1mvPvcWa1dPI1FMwpKxBbhQEmU0Q==",
     "name": "mongoDS",
