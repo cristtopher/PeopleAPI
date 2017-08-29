@@ -12,6 +12,7 @@ pipelines:
           - docker login $CONTAINER_REGISTRY_URI -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
           - VERSION=v1.1
           - docker build -t $CONTAINER_REGISTRY_URI/$IMAGE_NAME:$VERSION -t $IMAGE_NAME:latest .
+          - docker images
           - docker push $IMAGE_NAME:$VERSION
           - docker push $IMAGE_NAME:latest
 options:
