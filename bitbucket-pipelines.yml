@@ -12,7 +12,7 @@ pipelines:
           - echo $BITBUCKET_COMMIT
           - echo $CONTAINER_REGISTRY_URI
           - echo $CONTAINER_REGISTRY_USERNAME
-          - echo $CONTAINER_REGISTRY_PASSWORD
+          - echo $CONTAINER_REGISTRY_PASSWORD | base64 --decode
           - echo $IMAGE_NAME
           - docker login $CONTAINER_REGISTRY_URI -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
           - VERSION=v1.1
