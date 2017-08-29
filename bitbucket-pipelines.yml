@@ -9,11 +9,10 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install
           - npm test
-          - docker login axxezo.azurecr.io -u axxezo -p Gp/THWeHCoql15kUZdig88PFf5oRWM8g
-          - IMAGE=axxezo.azurecr.io/papi
+          - docker login $CONTAINER_REGISTRY_URI -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
           - VERSION=v1.1
-          - docker build -t $IMAGE:$VERSION -t $IMAGE:latest .
-          - docker push $IMAGE:$VERSION
-          - docker push $IMAGE:latest
+          - docker build -t $CONTAINER_REGISTRY_URI/$IMAGE_NAME:$VERSION -t $IMAGE_NAME:latest .
+          - docker push $IMAGE_NAME:$VERSION
+          - docker push $IMAGE_NAME:latest
 options:
   docker: true
