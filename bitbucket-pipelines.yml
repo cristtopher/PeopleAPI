@@ -9,14 +9,10 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install
           - npm test
-          - echo $BITBUCKET_COMMIT
-          - echo $CONTAINER_REGISTRY_URI
-          - echo $CONTAINER_REGISTRY_USERNAME
-          - echo $CONTAINER_REGISTRY_PASSWORD | base64 --decode
           - echo $IMAGE_NAME
           - docker login $CONTAINER_REGISTRY_URI -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
           - VERSION=v1.1
-          - docker build -t $CONTAINER_REGISTRY_URI/$IMAGE_NAME:$VERSION -t $IMAGE_NAME:latest .
+          - docker build -t $IMAGE_NAME:$VERSION -t $IMAGE_NAME:latest .
           - docker images
           - docker push $IMAGE_NAME:$VERSION
           - docker push $IMAGE_NAME:latest
