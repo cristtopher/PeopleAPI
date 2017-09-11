@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function(Person) {
+  Person.validatesUniquenessOf('dni');
   // remote method
   Person.getName = function(dni, cb) {
     Person.find({

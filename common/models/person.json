@@ -9,7 +9,10 @@
   "properties": {
     "dni": {
       "type": "string",
-      "required": true
+      "required": true,
+      "index": {
+        "unique": true
+      }
     },
     "name": {
       "type": "string",
