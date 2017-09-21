@@ -8,7 +8,7 @@ pipelines:
           - node
         script:
           - npm install
-          - npm test
+          #- npm test
   branches:
     master:
       - step:
@@ -16,7 +16,7 @@ pipelines:
            - node
          script:
           - npm install
-          - npm test
+          #- npm test
           - docker login $CONTAINER_REGISTRY_URI -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
           - VERSION=v1.2
           - docker build -t $CONTAINER_REGISTRY_URI/$IMAGE_NAME:$VERSION -t $CONTAINER_REGISTRY_URI/$IMAGE_NAME:latest .
@@ -24,4 +24,3 @@ pipelines:
           - docker push $CONTAINER_REGISTRY_URI/$IMAGE_NAME:latest
 options:
   docker: true
-  
