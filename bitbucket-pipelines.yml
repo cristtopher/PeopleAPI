@@ -6,7 +6,15 @@ pipelines:
     - step:
         caches:
           - node
-        script: # Modify the commands below to build your repository.
+        script:
+          - npm install
+          - npm test
+  branches:
+    master:
+      - step:
+         caches:
+           - node
+         script:
           - npm install
           - npm test
           - docker login $CONTAINER_REGISTRY_URI -u $CONTAINER_REGISTRY_USERNAME -p $CONTAINER_REGISTRY_PASSWORD
@@ -16,3 +24,4 @@ pipelines:
           - docker push $CONTAINER_REGISTRY_URI/$IMAGE_NAME:latest
 options:
   docker: true
+  
