@@ -1,5 +1,6 @@
 FROM node:boron
-MAINTAINER Cristtopher Quintana T. "cquintana@axxezo.com"
+LABEL maintainer="Cristtopher Quintana T. <cquintana@axxezo.com>"
+LABEL system="papi"
 # Create app directory
 WORKDIR /usr/src/app
 
